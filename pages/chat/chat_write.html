@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip APP</title>
+
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    
+
+</head>
+<body>
+    <div class="app">
+
+        <div class="sub_header">
+            <a href="#" class="back_btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.93151 9.49904L11 17.8164L9.71372 19L0 10.087V8.90726L9.71372 0L11 1.18165L1.93151 9.49904Z" fill="#2F2F28"/>
+                </svg>
+            </a>
+            <h3 class="page_title">David Wayne</h3>
+            <div class="menu_dots">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.96875 10.5C1.96875 9.17106 3.04606 8.09375 4.375 8.09375C5.70394 8.09375 6.78125 9.17106 6.78125 10.5C6.78125 11.8289 5.70394 12.9062 4.375 12.9062C3.04606 12.9062 1.96875 11.8289 1.96875 10.5ZM4.375 9.40625C3.77094 9.40625 3.28125 9.89594 3.28125 10.5C3.28125 11.1041 3.77094 11.5938 4.375 11.5938C4.97906 11.5938 5.46875 11.1041 5.46875 10.5C5.46875 9.89594 4.97906 9.40625 4.375 9.40625Z" fill="#2C2D3A"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.09375 10.5C8.09375 9.17106 9.17106 8.09375 10.5 8.09375C11.8289 8.09375 12.9062 9.17106 12.9062 10.5C12.9062 11.8289 11.8289 12.9062 10.5 12.9062C9.17106 12.9062 8.09375 11.8289 8.09375 10.5ZM10.5 9.40625C9.89594 9.40625 9.40625 9.89594 9.40625 10.5C9.40625 11.1041 9.89594 11.5938 10.5 11.5938C11.1041 11.5938 11.5938 11.1041 11.5938 10.5C11.5938 9.89594 11.1041 9.40625 10.5 9.40625Z" fill="#2C2D3A"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.625 8.09375C15.2961 8.09375 14.2188 9.17106 14.2188 10.5C14.2188 11.8289 15.2961 12.9062 16.625 12.9062C17.9539 12.9062 19.0312 11.8289 19.0312 10.5C19.0312 9.17106 17.9539 8.09375 16.625 8.09375ZM15.5312 10.5C15.5312 9.89594 16.0209 9.40625 16.625 9.40625C17.2291 9.40625 17.7188 9.89594 17.7188 10.5C17.7188 11.1041 17.2291 11.5938 16.625 11.5938C16.0209 11.5938 15.5312 11.1041 15.5312 10.5Z" fill="#2C2D3A"/>
+                </svg>
+                <div class="dropdown_menu">
+                    <button class="menu_item">나가기</button>
+                    <button class="menu_item">삭제하기</button>
+                    <button class="menu_item">저장하기</button>
+                    <button class="menu_item">위치공유하기</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat_container_list">
+            <div class="today_divider">Today</div>
+            
+            <div class="message received">
+                <div class="user_profile">
+                    <img src="../../assets/images/chat_profile.png" alt="Jhon Abraham" class="profile_img">
+                    
+                </div>
+                <div class="chat_list-item">
+                    <span class="user_name">Jhon Abraham</span>
+                    <div class="message_content">Hello! Jhon abraham</div>
+                </div>
+
+                <span class="message_time">09:25 AM</span>
+            </div>
+            
+            <div class="message sent">
+                <div class="message_content">Hello! Nazrul How are you?</div>
+                <span class="message_time">09:25 AM</span>
+            </div>
+        
+            <div class="message sent">
+                <div class="message_content">You did your job well!</div>
+                <span class="message_time">09:25 AM</span>
+            </div>
+        
+            <div class="message received">
+                <div class="user_profile">
+                    <img src="../../assets/images/chat_profile.png" alt="Jhon Abraham" class="profile_img">
+                    
+                </div>
+                <div class="chat_list-item">
+                    <span class="user_name">Jhon Abraham</span>
+                    <div class="message_content">Have a great working week!!</div>
+                </div>
+
+                <span class="message_time">09:25 AM</span>
+            </div>
+        
+            <div class="message received">
+                <div class="user_profile">
+                    <img src="../../assets/images/chat_profile.png" alt="Jhon Abraham" class="profile_img">
+                    
+                </div>
+                <div class="chat_list-item">
+                    <span class="user_name">Jhon Abraham</span>
+                    <div class="message_content">Hope you like it</div>
+                </div>
+
+                <span class="message_time">09:25 AM</span>
+            </div>
+        </div>
+
+        <div class="chat_input_area">
+            <button type="button" class="camera-btn">
+                <img src="../../assets/images/camera.png">
+            </button>
+            <input type="text" class="chat_input" placeholder="">
+            <button class="send_button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
+                    <path d="M20.7825 3.21745C20.6813 3.1167 20.5534 3.04695 20.4139 3.01639C20.2744 2.98584 20.1291 2.99574 19.995 3.04495L3.495 9.04495C3.3527 9.09892 3.23019 9.19491 3.14374 9.32016C3.05729 9.44542 3.01099 9.59401 3.01099 9.7462C3.01099 9.89839 3.05729 10.047 3.14374 10.1722C3.23019 10.2975 3.3527 10.3935 3.495 10.4474L9.9375 13.0199L14.6925 8.24995L15.75 9.30745L10.9725 14.0849L13.5525 20.5275C13.6081 20.667 13.7043 20.7866 13.8286 20.8709C13.953 20.9551 14.0998 21.0001 14.25 20.9999C14.4016 20.9968 14.5486 20.9479 14.6718 20.8595C14.795 20.7711 14.8885 20.6475 14.94 20.5049L20.94 4.00495C20.9911 3.87226 21.0034 3.72777 20.9755 3.58834C20.9477 3.44891 20.8807 3.32028 20.7825 3.21745Z" fill="#429EFF"/>
+                </svg>
+            </button>
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    </div>
+
+
+</body>
+</html>

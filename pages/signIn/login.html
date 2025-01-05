@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip APP</title>
+
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="login_wrap">
+            <button class="back-btn" id="backBtn">
+                <img src="../../assets/images/back_btn.png" alt="back">
+            </button>
+
+            
+            <h2 class="sign_title">
+                Welcome back! 
+                <br>Glad to see you, Again!
+            </h2>
+
+            <form class="login-form">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group password-group">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <button type="button" class="toggle-password">
+                        <img src="../../assets/images/visibility.svg" alt="toggle password visibility" class="eye-icon">
+                    </button>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="./forgot_password.html">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn full__btn">Login</button>
+            </form>
+
+            <div class="social-login">
+                <div class="divider">
+                    <span>Or Login with</span>
+                </div>
+                <div class="social-buttons">
+                    <button class="social-btn kakao">
+                        <img src="../../assets/images/kakao.svg" alt="Kakao">
+                    </button>
+                    <button class="social-btn google">
+                        <img src="../../assets/images/google_ic.svg" alt="Google">
+                    </button>
+                    <button class="social-btn apple">
+                        <img src="../../assets/images/apple.svg" alt="Apple">
+                    </button>
+                </div>
+            </div>
+
+            <div class="register-link">
+                Don't have an account? <a href="./sign_up.html">Register Now</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../assets/js/sign.js"></script>
+</body>
+</html>

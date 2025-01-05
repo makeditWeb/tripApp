@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip APP</title>
+
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="questions_wrap">
+            <button class="back-btn" id="backBtn">
+                <img src="../../assets/images/back_btn.png" alt="back">
+            </button>
+            <h2 class="sign_title">Additional questions</h2>
+        
+            <form class="questions-form" id="questionsForm" novalidate>
+                <div class="input-group">
+                    <label>Year of birth</label>
+                    <select id="birthYear" class="custom-select">
+                        <option value="" disabled selected>Select year</option>
+                    </select>
+                    <p class="error-message" id="birthYearError"></p>
+                </div>
+        
+                <div class="input-group">
+                    <label>City you live in</label>
+                    <select id="city" class="custom-select">
+                        <option value="" disabled selected>Select city</option>
+                    </select>
+                    <p class="error-message" id="cityError"></p>
+                </div>
+        
+                <div class="btn_wrap">
+                    <button type="submit" id="okayBtn" class="btn full__btn">Okay</button>
+                    <button type="button" id="skipBtn" class="btn outline__btn">Skip</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="../../assets/js/sign.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip APP</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    
+
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="header__inner flex-center-between">
+                <img src="../../assets/images/header_logo.svg" alt="logo" class="logo">
+                <div class="header__right flex-center">
+                    <div class="notification-bell">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22" fill="none">
+                            <path d="M18.2069 14.8604C17.812 13.7083 17.6103 12.5032 17.6091 11.2901V8.2929C17.6378 6.39372 16.9327 4.55179 15.63 3.12347C14.3319 1.69289 12.5301 0.773058 10.57 0.540249C9.48686 0.43224 8.38496 0.540249 7.33924 0.880778C6.29353 1.2033 5.34146 1.74185 4.53922 2.46041C3.73299 3.16044 3.09038 4.01685 2.65382 4.97312C2.21508 5.92902 1.98608 6.9616 1.98113 8.00637V11.3067C1.97884 12.5147 1.77707 13.7147 1.38335 14.8619L0.450012 17.5157L1.19762 18.5028H6.66811C6.66811 19.2918 7.00368 20.0629 7.58272 20.6209C8.16021 21.176 8.964 21.5 9.78653 21.5C10.6075 21.5 11.4097 21.1775 11.9888 20.6209C12.5678 20.0644 12.9049 19.2918 12.9049 18.5028H18.3754L19.1215 17.5157L18.2069 14.8604ZM10.8869 19.5813C10.7433 19.7221 10.5721 19.8342 10.3833 19.9112C10.1945 19.9882 9.99164 20.0285 9.78653 20.0299C9.58104 20.0285 9.37787 19.988 9.18874 19.9108C8.99962 19.8336 8.82828 19.7211 8.68463 19.5798C8.53787 19.4419 8.42095 19.2775 8.34059 19.096C8.26023 18.9145 8.21802 18.7195 8.21639 18.5223H11.3364C11.3429 18.7191 11.3064 18.915 11.2292 19.0974C11.1521 19.2799 11.036 19.4447 10.8884 19.5813H10.8869ZM2.27923 17.0161L2.85828 15.345C3.30983 14.0431 3.54321 12.6805 3.5497 11.3081V8.00637C3.5497 7.1618 3.73699 6.33673 4.09128 5.58217C4.44558 4.81111 4.94971 4.12855 5.60367 3.572C6.25763 2.99895 7.02397 2.56692 7.84493 2.3164C8.68463 2.04638 9.56178 1.95637 10.4202 2.04638C11.9935 2.24521 13.4359 2.9926 14.4735 4.14655C15.5114 5.30193 16.0694 6.78471 16.0405 8.3109V11.3262C16.0405 12.6898 16.2653 14.0534 16.7319 15.363L17.311 17.0326H2.28079V17.0146L2.27923 17.0161Z" fill="#BDBDBC"/>
+                            <ellipse class="notification-dot" cx="15.8909" cy="4.69484" rx="3.55908" ry="3.3871" fill="#FD2121"/>
+                        </svg>
+                    </div>
+                    <button class="non-btn btn-settings">
+                        <img src="../../assets/images/settings.svg" alt="settings">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="search-page">
+            <!-- 검색 및 탭 컨테이너 -->
+            <div class="search-tab-container">
+                <!-- 검색 영역 -->
+                <div class="search-box">
+                    <div class="search-input-wrap">
+                        <input type="text" placeholder="Search" class="search-input">
+                        
+                        <button type="button" class="cancel-btn" onclick="location.href='index.html'">취소</button>
+                    </div>
+                </div>
+
+                <div class="search_tab">
+                    <!-- 탭 메뉴 -->
+                    <ul class="tab-list">
+                        <li class="tab-item active" data-tab="city">도시</li>
+                        <li class="tab-item" data-tab="posting">포스팅</li>
+                        <li class="tab-item" data-tab="person">계정</li>
+                    </ul>
+
+                    <!-- 탭 컨텐츠 영역 -->
+                    <div class="tab-contents">
+                        <!-- 도시 탭 컨텐츠 -->
+                        <div class="tab-content active" id="city">
+                            <div class="image-grid">
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                                </div>
+            
+                            </div>
+                        </div>
+
+                        <!-- 포스팅 탭 컨텐츠 -->
+                        <div class="tab-content" id="posting">
+                            <div class="image-grid">
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                                </div>
+            
+                            </div>
+                        </div>
+
+                        <!-- 게시물 탭 컨텐츠 -->
+                        <div class="tab-content" id="person">
+                            <div class="person_list">
+                                <div class="person_item">
+                                    <div class="person_user">
+                                        <img src="../assets/images/profile.png">
+                                        <h5 class="user_name">Hana</h5>
+                                    </div>
+                                    <ul class="user_info">
+                                        <li class="location">
+                                            일본
+                                        </li>
+                                        <li class="info">
+                                            여행중
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="person_item">
+                                    <div class="person_user">
+                                        <img src="../assets/images/profile.png">
+                                        <h5 class="user_name">Hana</h5>
+                                    </div>
+                                    <ul class="user_info">
+                                        <li class="location">
+                                            일본
+                                        </li>
+                                        <li class="info">
+                                            여행중
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="person_item">
+                                    <div class="person_user">
+                                        <img src="../assets/images/profile.png">
+                                        <h5 class="user_name">Hana</h5>
+                                    </div>
+                                    <ul class="user_info">
+                                        <li class="location">
+                                            일본
+                                        </li>
+                                        <li class="info">
+                                            여행중
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="person_item">
+                                    <div class="person_user">
+                                        <img src="../assets/images/profile.png">
+                                        <h5 class="user_name">Hana</h5>
+                                    </div>
+                                    <ul class="user_info">
+                                        <li class="location">
+                                            일본
+                                        </li>
+                                        <li class="info">
+                                            여행중
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="person_item">
+                                    <div class="person_user">
+                                        <img src="../assets/images/profile.png">
+                                        <h5 class="user_name">Hana</h5>
+                                    </div>
+                                    <ul class="user_info">
+                                        <li class="location">
+                                            일본
+                                        </li>
+                                        <li class="info">
+                                            여행중
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnIHhzD8CYe-CLEAy-Sg4t3fpeI12aQLY&callback=initMap"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/slide.js"></script>
+    </div>
+
+
+</body>
+</html>
