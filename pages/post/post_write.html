@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip APP</title>
+
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    
+
+</head>
+<body>
+    <div class="app">
+
+        <div class="post-sub_header">
+            <a href="../post.html" class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.93151 9.49904L11 17.8164L9.71372 19L0 10.087V8.90726L9.71372 0L11 1.18165L1.93151 9.49904Z" fill="#2F2F28"/>
+                </svg>
+            </a>
+            <h3 class="page_title">Post</h3>
+        </div>
+
+        <div class="write-container">
+            <div class="map" id="writeMap"></div>
+
+
+            <div class="post_text">
+                <input type="text" class="title-input" placeholder="제목">
+                <textarea class="content-text" placeholder="글을 입력해주세요"></textarea>
+            </div>
+
+            <div class="post_add">
+                <div class="add_inner">
+                    <div class="add_left">
+                        <img src="../../assets/images/image_add.png">
+                        <p>사진추가</p>
+                    </div>
+                    <a href="./photo_add.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09527 8.00075L0.5 1.43439L1.43548 0.5L8.5 7.53657V8.46795L1.43548 15.5L0.5 14.5671L7.09527 8.00075Z" fill="#2F2F28"/>
+                        </svg>
+                    </a>
+
+                </div>
+
+                <!-- 이미지 추가시 -->
+
+                <div class="image_add__list">
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                    </div>
+                </div>
+
+
+                <!-- 기존 -->
+                <div class="add_inner" style="display: none;">
+                    <div class="add_left">
+                        <img src="../../assets/images/person_add.png">
+                        <p>친구추가</p>
+                    </div>
+                    <a href="./friend_add.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09527 8.00075L0.5 1.43439L1.43548 0.5L8.5 7.53657V8.46795L1.43548 15.5L0.5 14.5671L7.09527 8.00075Z" fill="#2F2F28"/>
+                        </svg>
+                    </a>
+
+                </div>
+
+                <!-- 친구 추가시 -->
+                <div class="add_inner">
+                    <div class="add_left">
+                        <img src="../../assets/images/person_add.png">
+                        <p>친구추가</p>
+                    </div>
+                    <div class="add_right">
+                        <p>tommy</p>
+                        <a href="./friend_add.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09527 8.00075L0.5 1.43439L1.43548 0.5L8.5 7.53657V8.46795L1.43548 15.5L0.5 14.5671L7.09527 8.00075Z" fill="#2F2F28"/>
+                            </svg>
+                        </a>
+                    </div>
+
+
+                </div>
+
+                <div class="button-wrapp">
+                    <button type="button" class="btn full__btn">Share </button>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="../../assets/js/common.js"></script>
+        <script src="../../assets/js/main.js"></script>
+        <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnIHhzD8CYe-CLEAy-Sg4t3fpeI12aQLY&callback=initMap">
+        </script>
+    </div>
+
+
+</body>
+</html>

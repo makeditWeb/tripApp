@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip APP</title>
+
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    
+
+</head>
+<body>
+    <div class="app">
+
+        <div class="post-sub_header">
+            <a href="./post_write.html" class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.93151 9.49904L11 17.8164L9.71372 19L0 10.087V8.90726L9.71372 0L11 1.18165L1.93151 9.49904Z" fill="#2F2F28"/>
+                </svg>
+            </a>
+            <h3 class="page_title">Photo</h3>
+        </div>
+
+        <div class="write-container">
+            <div class="image_contain">
+                <img src="../../assets/images/post_list01.png">
+            </div>
+            <div class="image_wrapp">
+                <div class="recent-items">
+                    <button class="dropdown-toggle">
+                        최근항목
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">최근항목 1</a></li>
+                        <li><a href="#">최근항목 2</a></li>
+                        <li><a href="#">최근항목 3</a></li>
+                    </ul>
+                </div>
+                <a href="javascript:;" onclick="capturePhoto()">
+                    <img src="../../assets/images/camera_black.png">
+                </a>
+                
+                <input type="file" accept="image/*" capture="camera" id="cameraInput" style="display: none">
+                
+                <script>
+                function capturePhoto() {
+                    document.getElementById('cameraInput').click();
+                }
+                </script>
+            </div>
+
+            <div class="image_list">
+                <div class="image-grid">
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list01.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list02.png" onclick="showPostDetail(this.src)">
+                    </div>
+                    <div class="image-item">
+                        <img src="../../assets/images/post_list03.png" onclick="showPostDetail(this.src)">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="../../assets/js/common.js"></script>
+        <script src="../../assets/js/main.js"></script>
+
+    </div>
+
+
+</body>
+</html>

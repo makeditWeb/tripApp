@@ -416,3 +416,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+
+document.querySelector('.dropdown-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.dropdown-menu').classList.toggle('show');
+});
+
+// 외부 클릭 시 드롭다운 닫기
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.recent-items')) {
+        document.querySelector('.dropdown-toggle').classList.remove('active');
+        document.querySelector('.dropdown-menu').classList.remove('show');
+    }
+});

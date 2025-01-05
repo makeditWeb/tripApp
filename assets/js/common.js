@@ -1,30 +1,80 @@
-// Google Maps 초기화 함수를 전역 스코프에 정의
-window.initMap = function() {
+function initMap() {
     const seoulCoords = { lat: 37.5665, lng: 126.9780 };
+    const geocoder = new google.maps.Geocoder();
     
-    const map = new google.maps.Map(document.getElementById('map'), {
-        center: seoulCoords,
-        zoom: 17,
-        disableDefaultUI: true,
-        styles: [
-            {
-                featureType: "poi",
-                elementType: "labels",
-                stylers: [{ visibility: "off" }]
-            },
-            {
-                featureType: "transit",
-                elementType: "labels",
-                stylers: [{ visibility: "off" }]
-            }
-        ]
-    });
+    // postMap 초기화 (postMap 요소가 있을 경우에만)
+    const postMapElement = document.getElementById('postMap');
+    if (postMapElement) {
+        const map = new google.maps.Map(postMapElement, {
+            center: seoulCoords,
+            zoom: 17,
+            disableDefaultUI: true,
+            styles: [
+                {
+                    featureType: "poi",
+                    elementType: "labels",
+                    stylers: [{ visibility: "off" }]
+                },
+                {
+                    featureType: "transit",
+                    elementType: "labels",
+                    stylers: [{ visibility: "off" }]
+                }
+            ]
+        });
 
-    // 서울 마커 추가
-    const marker = new google.maps.Marker({
-        position: seoulCoords,
-        map: map,
-        title: '서울'
+        const marker = new google.maps.marker.AdvancedMarkerElement({
+            position: seoulCoords,
+            map: map,
+            title: '서울'
+        });
+
+        // 지도의 중심이 변경될 때마다 주소 업데이트
+        map.addListener('center_changed', _.debounce(() => {
+            const center = map.getCenter();
+            updateAddress(geocoder, center);
+        }, 300));
+
+        // 초기 주소 설정
+        updateAddress(geocoder, seoulCoords);
+    }
+
+    // writeMap 초기화 (writeMap 요소가 있을 경우에만)
+    const writeMapElement = document.getElementById('writeMap');
+    if (writeMapElement) {
+        const writeMap = new google.maps.Map(writeMapElement, {
+            center: seoulCoords,
+            zoom: 17,
+            disableDefaultUI: true,
+            styles: [
+                {
+                    featureType: "poi",
+                    elementType: "labels",
+                    stylers: [{ visibility: "off" }]
+                },
+                {
+                    featureType: "transit",
+                    elementType: "labels",
+                    stylers: [{ visibility: "off" }]
+                }
+            ]
+        });
+
+        const writeMarker = new google.maps.marker.AdvancedMarkerElement({
+            position: seoulCoords,
+            map: writeMap,
+            title: '서울'
+        });
+    }
+}
+
+function updateAddress(geocoder, latLng) {
+    geocoder.geocode({ location: latLng }, (results, status) => {
+        if (status === 'OK') {
+            if (results[0]) {
+                document.getElementById('current-address').textContent = results[0].formatted_address;
+            }
+        }
     });
 }
 
