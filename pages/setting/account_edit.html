@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip APP</title>
+
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    
+
+</head>
+<body>
+    <div class="app">
+
+
+        <div class="setting_header">
+            <a href="./account.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.93151 9.49904L11 17.8164L9.71372 19L0 10.087V8.90726L9.71372 0L11 1.18165L1.93151 9.49904Z" fill="#2F2F28"/>
+                </svg>
+            </a>
+            <h3 class="page_title">Account</h3>
+        </div>
+
+        <div class="setting__inner">
+
+            <div class="account-form">
+                <form>
+                    <div class="form-group">
+                        <label for="fullname">Full name</label>
+                        <input type="text" id="fullname" value="Puerto Rico" placeholder="Full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nickname">Nick name</label>
+                        <input type="text" id="nickname" value="puerto_rico" placeholder="Nick name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" value="youremail@domain.com" placeholder="youremail@domain.com">
+                    </div>
+
+                    <div class="form-group phone-group">
+                        <label for="phone">Phone number</label>
+                        <div class="phone-input-container">
+                            <div class="country-select">
+                                <div class="country-trigger" role="button" tabindex="0">
+                                    <img src="https://flagcdn.com/us.svg" alt="United States flag" id="selected-flag" class="flag-icon">
+                                    <span class="country-code">+1</span>
+                                </div>
+                                <div class="country-dropdown">
+                                    <ul class="country-list">
+                                        <!-- 국가 목록이 여기에 동적으로 추가됨 -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <input type="tel" id="phone" placeholder="123-456-7890" value="123-456-7890">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="country">Country</label>
+                            <div class="custom-dropdown">
+                                <div class="dropdown-trigger">
+                                    <span class="selected-option">United States</span>
+                                    <svg class="dropdown-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group half">
+                            <label for="gender">Gender</label>
+                            <div class="custom-dropdown">
+                                <div class="dropdown-trigger">
+                                    <span class="selected-option">Female</span>
+                                    <svg class="dropdown-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" placeholder="Enter your address" value="45 New Avenue, New York">
+                    </div>
+                </form>
+
+                <button class="full__btn btn save-btn">SAVE</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <!-- Google Maps API를 마지막에 로드 -->
+    <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnIHhzD8CYe-CLEAy-Sg4t3fpeI12aQLY&callback=initMap">
+</script>
+    <script src="../../assets/js/main.js"></script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 현재 페이지가 수정 페이지인지 확인
+    const isEditPage = window.location.href.includes('edit');
+
+    // DOM 요소
+    const phoneInput = document.getElementById('phone');
+    const countryTrigger = document.querySelector('.country-trigger');
+    const countryDropdown = document.querySelector('.country-dropdown');
+    const countryList = document.querySelector('.country-list');
+    const selectedFlag = document.getElementById('selected-flag');
+    const countryCodeSpan = document.querySelector('.country-code');
+    const customDropdowns = document.querySelectorAll('.custom-dropdown');
+
+    // 국가 데이터
+    const countries = [
+        { code: 'US', name: 'United States', dial_code: '+1' },
+        { code: 'GB', name: 'United Kingdom', dial_code: '+44' },
+        { code: 'KR', name: 'South Korea', dial_code: '+82' },
+        { code: 'JP', name: 'Japan', dial_code: '+81' },
+        { code: 'CN', name: 'China', dial_code: '+86' },
+        { code: 'DE', name: 'Germany', dial_code: '+49' },
+        { code: 'FR', name: 'France', dial_code: '+33' },
+        { code: 'ES', name: 'Spain', dial_code: '+34' },
+        { code: 'IT', name: 'Italy', dial_code: '+39' },
+        { code: 'CA', name: 'Canada', dial_code: '+1' }
+    ];
+
+    // 입력 필드 초기화
+    function initializeInputs() {
+        // 모든 입력 필드 disabled 설정
+        document.querySelectorAll('input').forEach(input => {
+            input.disabled = !isEditPage;
+        });
+    }
+
+    // 국가 목록 초기화
+    function initializeCountryList() {
+        if (!countryList) return;
+
+        countryList.innerHTML = ''; // 기존 목록 초기화
+
+        countries.forEach(country => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <img src="https://flagcdn.com/${country.code.toLowerCase()}.svg" 
+                     alt="${country.name} flag">
+                <span>${country.name}</span>
+                <span>${country.dial_code}</span>
+            `;
+            
+            // 국가 선택 이벤트
+            li.addEventListener('click', () => {
+                if (!isEditPage) return;
+                selectedFlag.src = `https://flagcdn.com/${country.code.toLowerCase()}.svg`;
+                selectedFlag.alt = `${country.name} flag`;
+                countryCodeSpan.textContent = country.dial_code;
+                countryDropdown.classList.remove('active');
+            });
+            
+            countryList.appendChild(li);
+        });
+    }
+
+    // Country/Gender 드롭다운 초기화
+    function initializeCustomDropdowns() {
+        customDropdowns.forEach(dropdown => {
+            const trigger = dropdown.querySelector('.dropdown-trigger');
+            const isGender = dropdown.closest('.form-group').querySelector('label').textContent.includes('Gender');
+            const options = isGender ? ['Female', 'Male', 'Other'] : countries.map(c => c.name);
+            
+            // 드롭다운 리스트 생성
+            const dropdownList = document.createElement('ul');
+            dropdownList.className = 'dropdown-list';
+
+            options.forEach(option => {
+                const li = document.createElement('li');
+                li.textContent = option;
+                li.addEventListener('click', () => {
+                    if (!isEditPage) return;
+                    dropdown.querySelector('.selected-option').textContent = option;
+                    dropdownList.style.display = 'none';
+                });
+                dropdownList.appendChild(li);
+            });
+
+            dropdown.appendChild(dropdownList);
+
+            // 수정 페이지에서만 드롭다운 활성화
+            if (isEditPage) {
+                trigger.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    // 다른 모든 드롭다운 닫기
+                    customDropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.querySelector('.dropdown-list').style.display = 'none';
+                        }
+                    });
+                    countryDropdown?.classList.remove('active');
+                    // 현재 드롭다운 토글
+                    const list = dropdown.querySelector('.dropdown-list');
+                    list.style.display = list.style.display === 'block' ? 'none' : 'block';
+                });
+            } else {
+                dropdown.classList.add('disabled');
+            }
+        });
+    }
+
+    // 전화번호 포맷팅
+    function formatPhoneNumber(value) {
+        let numbers = value.replace(/\D/g, '');
+        if (numbers.length <= 3) return numbers;
+        if (numbers.length <= 6) return numbers.slice(0, 3) + '-' + numbers.slice(3);
+        return numbers.slice(0, 3) + '-' + numbers.slice(3, 6) + '-' + numbers.slice(6, 10);
+    }
+
+    // 이벤트 리스너 설정
+    function setupEventListeners() {
+        // 국가 선택 드롭다운 토글
+        if (countryTrigger) {
+            countryTrigger.addEventListener('click', (e) => {
+                if (!isEditPage) return;
+                e.stopPropagation();
+                // 다른 드롭다운들 닫기
+                document.querySelectorAll('.dropdown-list').forEach(list => {
+                    list.style.display = 'none';
+                });
+                // 국가 드롭다운 토글
+                countryDropdown.classList.toggle('active');
+            });
+        }
+
+        // 전화번호 포맷팅
+        if (phoneInput) {
+            // 초기값 포맷팅
+            phoneInput.value = formatPhoneNumber(phoneInput.value);
+            
+            if (isEditPage) {
+                phoneInput.addEventListener('input', (e) => {
+                    e.target.value = formatPhoneNumber(e.target.value);
+                });
+            }
+        }
+
+        // 드롭다운 외부 클릭시 닫기
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.country-select') && !e.target.closest('.custom-dropdown')) {
+                countryDropdown?.classList.remove('active');
+                document.querySelectorAll('.dropdown-list').forEach(list => {
+                    list.style.display = 'none';
+                });
+            }
+        });
+    }
+
+    // 초기화 함수들 실행
+    try {
+        initializeInputs();
+        initializeCountryList();
+        initializeCustomDropdowns();
+        setupEventListeners();
+    } catch (error) {
+        console.error('Initialization error:', error);
+    }
+});
+    </script>
+
+
+</body>
+</html>

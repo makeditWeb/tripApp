@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip APP</title>
+
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    
+
+</head>
+<body>
+    <div class="app">
+
+
+        <div class="setting_header">
+            <a href="../setting.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.93151 9.49904L11 17.8164L9.71372 19L0 10.087V8.90726L9.71372 0L11 1.18165L1.93151 9.49904Z" fill="#2F2F28"/>
+                </svg>
+            </a>
+            <h3 class="page_title">Edit Profile</h3>
+        </div>
+
+        <div class="setting__inner">
+
+            <div class="profile-card">
+                <div class="profile-image-container">
+                    <img src="../../assets/images/profile.png" alt="Profile" class="profile-image">
+                    <button class="edit-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+                            <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"/>
+                            <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                        </svg>
+                    </button>
+                </div>
+        
+                <div class="form-group">
+                    <label class="form-label">User name</label>
+                    <input type="text" class="form-input" value="Puerto Rico">
+                </div>
+        
+                <div class="form-group">
+                    <label class="form-label">Web link</label>
+                    <input type="url" class="form-input" value="www.website.com">
+                </div>
+        
+                <div class="form-group">
+                    <label class="form-label">Introduction</label>
+                    <textarea class="form-input">동남아 여행 및 한국 여행을 주로 하며, 다양한 활동을 남기는.....</textarea>
+                </div>
+
+                <button class="full__btn btn save-btn">SAVE</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <!-- Google Maps API를 마지막에 로드 -->
+    <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnIHhzD8CYe-CLEAy-Sg4t3fpeI12aQLY&callback=initMap">
+</script>
+    <script src="../../assets/js/main.js"></script>
+
+
+
+</body>
+</html>
