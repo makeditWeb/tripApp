@@ -3597,6 +3597,8 @@ body {
 .setting__inner {
   padding: 0 20px;
   box-sizing: border-box;
+  height: calc(100% - 68px);
+  overflow-y: auto;
 }
 .setting__inner .profile_section {
   padding: 15px 0;
@@ -4391,6 +4393,17 @@ body {
   box-sizing: border-box;
 }
 
+.notification_inner {
+  height: 100%;
+}
+.notification_inner.main-notice .notification-item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E8ECF4;
+  padding-top: 10px;
+}
+.notification_inner.main-notice .notification-item:last-child {
+  border-bottom: none;
+}
 .notification_inner .tabs {
   background-color: #fff;
   display: flex;

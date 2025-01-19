@@ -2869,7 +2869,8 @@ $font-sizes: (
 .setting__inner {
   padding: 0 20px;
   box-sizing: border-box;
-
+  height: calc(100% - 68px);
+  overflow-y: auto;
   .profile_section {
     padding: 15px 0;
     box-sizing: border-box;
@@ -3829,6 +3830,19 @@ $font-sizes: (
 }
 
 .notification_inner {
+  height: 100%;
+
+  &.main-notice{
+    .notification-item{
+      padding-bottom: 20px;
+      border-bottom: 1px solid $light-gray;
+      padding-top: 10px;
+
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
   .tabs {
     background-color: #fff;
     display: flex;

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip APP</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    
+
+</head>
+<body>
+    <div class="app">
+
+
+        <div class="setting_header">
+            <a href="../setting.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.93151 9.49904L11 17.8164L9.71372 19L0 10.087V8.90726L9.71372 0L11 1.18165L1.93151 9.49904Z" fill="#2F2F28"/>
+                </svg>
+            </a>
+            <h3 class="page_title">Notifications</h3>
+
+        </div>
+
+        <div class="setting__inner">
+
+            <div class="notification_inner main-notice">
+
+
+                <div class="notifications_container">
+                    <div class="notification-item">
+                        <div class="notification-avatar">
+                            <img src="../../assets/images/profile.png" alt="Lex Murphy">
+                            <span class="status-dot"></span>
+                        </div>
+                        <div class="notification-content">
+                            <p class="notification-text">
+                                <strong>Lex Murphy</strong> requested access to
+                                <strong>UNIX directory tree hierarchy</strong>
+                            </p>
+                            <div class="notification-actions">
+                                <button class="btn-approve">Approve</button>
+                                <button class="btn-decline">Decline</button>
+                            </div>
+                            <span class="notification-time">Today at 9:42 AM</span>
+                        </div>
+                    </div>
+            
+                    <div class="notification-item">
+                        <div class="notification-avatar">
+                            <img src="../../assets/images/profile01.png" alt="Ray Arnold">
+                            <span class="status-dot"></span>
+                        </div>
+                        <div class="notification-content">
+                            <p class="notification-text">
+                                <strong>Ray Arnold</strong> left 6 comments on
+                                <strong>Isla Nublar SOC2 compliance report</strong>
+                            </p>
+                            <span class="notification-time">Last Wednesday at 9:42 AM</span>
+                        </div>
+                    </div>
+            
+                    <div class="notification-item">
+                        <div class="notification-avatar">
+                            <img src="../../assets/images/profile02.png" alt="Denise Nedry">
+                        </div>
+                        <div class="notification-content">
+                            <p class="notification-text">
+                                <strong>Denise Nedry</strong> replied to <strong>Anna Srzand</strong>
+                            </p>
+                            <div class="reply-content">
+                                "Oh, I finished de-bugging the phones, I system's compiling for eighteen minutes"
+                            </div>
+                            <span class="notification-time">Last Wednesday at 9:42 AM</span>
+                        </div>
+                    </div>
+            
+                    <div class="notification-item">
+                        <div class="notification-avatar">
+                            <img src="../../assets/images/profile03.png" alt="John Hammond">
+                        </div>
+                        <div class="notification-content">
+                            <p class="notification-text">
+                                <strong>John Hammond</strong> attached a file to
+                                <strong>Isla Nublar SOC2 compliance report</strong>
+                            </p>
+                            <div class="file-attachment">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">EY_review.pdf</span>
+                                <span class="file-size">2mb</span>
+                            </div>
+                            <span class="notification-time">Last Wednesday at 9:42 AM</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <!-- Google Maps API를 마지막에 로드 -->
+    <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnIHhzD8CYe-CLEAy-Sg4t3fpeI12aQLY&callback=initMap">
+</script>
+    <script src="../assets/js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})
+    </script>
+</body>
+</html>
