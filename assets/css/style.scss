@@ -3938,3 +3938,255 @@ $font-sizes: (
     margin-bottom: 12px;
   }
 }
+
+
+
+.profile_wrapper {
+  padding: 24px 16px;
+  .profile_container {
+    background: white;
+  }
+
+  .profile_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .profile_image {
+      width: 90px;
+      height: 90px;
+      margin-right: 16px;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .profile_title {
+      h2 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 10px;
+
+        .crown {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .profile_stats {
+    display: flex;
+    justify-content: flex-start;
+    gap: 32px;
+
+    .stat_item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      .number {
+        font-size: 18px;
+        font-weight: 600;
+        color: $black-text;
+      }
+      
+      .label {
+        font-size: 14px;
+        color: #666;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .profile_info {
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      color: $black-text;
+      font-size: 14px;
+    }
+
+    .bio {
+      color: $black-text;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      overflow: hidden;
+      white-space: normal;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      word-break: keep-all; 
+    }
+
+    .website {
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .button_area{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+
+    &.friends-btn{
+      button{
+        width: 100%;
+      }
+    }
+    button{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 500;
+      height: 50px;
+    }
+
+    .outline-btn{
+      border:1px solid #BDBDBC;
+      background-color: #fff;
+    }
+
+    .full-btn{
+      background-color: $blue;
+      color: #fff;
+
+    }
+  }
+
+
+
+}
+
+.profile_tab{
+  height: calc(100vh - 454px);
+  .profile_inner{
+    height: calc(100% - 35px);
+    overflow-y: auto;
+  }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding-bottom: 50px;
+    .image-item {
+      background: #f0f0f0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .tab-list {
+    background-color: #fff;
+    display: grid;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 0 16px;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+
+    .tab-link {
+      color: #64748B;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 16px;
+      text-align: center;
+
+      &.active {
+        color: #1E293B;
+        font-weight: 600;
+        border-bottom: 3px solid #2E70E8;
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+  }
+
+  .message {
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    .message_list {
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 15px;
+      margin-bottom: 12px;
+      padding: 16px;
+      box-sizing: border-box;
+      border: 1px solid #dbdbdb;
+      border-radius: 8px;
+
+      .message_list-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    
+
+      .post-imgage {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+      }
+
+      h3 {
+        color: #2F2F28;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        padding: 0;
+        color: #2F2F28;
+      }
+
+      .date {
+        font-size: 14px;
+        color: #BDBDBC;
+        text-align: right;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip APP</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+
+</head>
+
+<body>
+    <div class="app">
+
+        <div class="sub_header">
+            <a href="#" class="back_btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.93151 9.49904L11 17.8164L9.71372 19L0 10.087V8.90726L9.71372 0L11 1.18165L1.93151 9.49904Z"
+                        fill="#2F2F28" />
+                </svg>
+            </a>
+            <h3 class="page_title">Profile</h3>
+            <div class="menu_dots">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.96875 10.5C1.96875 9.17106 3.04606 8.09375 4.375 8.09375C5.70394 8.09375 6.78125 9.17106 6.78125 10.5C6.78125 11.8289 5.70394 12.9062 4.375 12.9062C3.04606 12.9062 1.96875 11.8289 1.96875 10.5ZM4.375 9.40625C3.77094 9.40625 3.28125 9.89594 3.28125 10.5C3.28125 11.1041 3.77094 11.5938 4.375 11.5938C4.97906 11.5938 5.46875 11.1041 5.46875 10.5C5.46875 9.89594 4.97906 9.40625 4.375 9.40625Z"
+                        fill="#2C2D3A" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8.09375 10.5C8.09375 9.17106 9.17106 8.09375 10.5 8.09375C11.8289 8.09375 12.9062 9.17106 12.9062 10.5C12.9062 11.8289 11.8289 12.9062 10.5 12.9062C9.17106 12.9062 8.09375 11.8289 8.09375 10.5ZM10.5 9.40625C9.89594 9.40625 9.40625 9.89594 9.40625 10.5C9.40625 11.1041 9.89594 11.5938 10.5 11.5938C11.1041 11.5938 11.5938 11.1041 11.5938 10.5C11.5938 9.89594 11.1041 9.40625 10.5 9.40625Z"
+                        fill="#2C2D3A" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.625 8.09375C15.2961 8.09375 14.2188 9.17106 14.2188 10.5C14.2188 11.8289 15.2961 12.9062 16.625 12.9062C17.9539 12.9062 19.0312 11.8289 19.0312 10.5C19.0312 9.17106 17.9539 8.09375 16.625 8.09375ZM15.5312 10.5C15.5312 9.89594 16.0209 9.40625 16.625 9.40625C17.2291 9.40625 17.7188 9.89594 17.7188 10.5C17.7188 11.1041 17.2291 11.5938 16.625 11.5938C16.0209 11.5938 15.5312 11.1041 15.5312 10.5Z"
+                        fill="#2C2D3A" />
+                </svg>
+                <div class="dropdown_menu">
+                    <button class="menu_item">계정센터</button>
+                    <button class="menu_item">로그아웃</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile_wrapper">
+            <div class="profile_container">
+                <div class="profile_header">
+                    <div class="profile_image">
+                        <img src="../assets/images/profile.png" alt="profile image" />
+                    </div>
+                    <div class="profile_title">
+                        <h2>James Ronald
+                            <span class="crown"><img src="../assets/images/ranking.png"></span>
+                        </h2>
+                        <div class="profile_stats">
+                            <div class="stat_item">
+                                <span class="number">1.208</span>
+                                <span class="label">Friend</span>
+                            </div>
+                            <div class="stat_item">
+                                <span class="number">300</span>
+                                <span class="label">Post</span>
+                            </div>
+                            <div class="stat_item">
+                                <span class="number">120</span>
+                                <span class="label">Ranking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="profile_info">
+                    <div class="location">
+                        <span class="icon"><img src="../assets/images/location_profile.png"></span>
+                        <span>Seoul / 2년</span>
+                    </div>
+                    <p class="bio">동남아 여행 및 한국 여행을 주로 하며, 다양한 활동을 남기는 </p>
+                    <a href="#" class="website">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M7.05536 13.6865C6.42398 14.301 5.57604 14.6422 4.69499 14.6363C3.81395 14.6304 2.97066 14.2778 2.34757 13.6549C1.72448 13.032 1.37169 12.1888 1.36554 11.3078C1.35939 10.4267 1.70036 9.57868 2.3147 8.94713L5.15603 6.1038L4.2127 5.16113L1.37203 8.00446C0.493544 8.88339 0.000191119 10.0753 0.000503688 11.318C0.000816258 12.5606 0.494768 13.7523 1.3737 14.6308C2.25262 15.5093 3.44453 16.0026 4.68721 16.0023C5.92989 16.002 7.12154 15.508 8.00003 14.6291L10.8414 11.7878L9.8987 10.8451L7.05536 13.6865Z"
+                                fill="#374957" />
+                            <path
+                                d="M14.6293 1.37426C14.1954 0.93747 13.6793 0.591113 13.1106 0.355258C12.542 0.119403 11.9322 -0.00126016 11.3166 0.000260568V0.000260568C10.7013 -0.00137392 10.0918 0.118979 9.5233 0.354361C8.95482 0.589744 8.43863 0.935485 8.00459 1.37159L5.15992 4.21359L6.10259 5.15693L8.94592 2.31559C9.25629 2.00336 9.62551 1.7558 10.0322 1.58723C10.4389 1.41867 10.875 1.33246 11.3153 1.33359V1.33359C11.9781 1.33381 12.626 1.53055 13.177 1.89893C13.7281 2.26731 14.1576 2.79079 14.4111 3.40321C14.6647 4.01562 14.731 4.68947 14.6017 5.33958C14.4724 5.98968 14.1532 6.58685 13.6846 7.05559L10.8433 9.89693L11.7866 10.8403L14.6279 8.00026C15.5053 7.12099 15.9981 5.92966 15.9984 4.68754C15.9986 3.44541 15.5063 2.25388 14.6293 1.37426V1.37426Z"
+                                fill="#374957" />
+                            <path d="M9.89682 5.16126L5.16061 9.89746L6.10342 10.8403L10.8396 6.10407L9.89682 5.16126Z"
+                                fill="#374957" />
+                        </svg>
+                        www.website.com
+                    </a>
+                </div>
+
+                <div class="button_area">
+                    <button type="button" class="btn outline-btn">Follow</button>
+                    <button type="button" class="btn full-btn">Message</button>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="profile_tab">
+            <ul class="tab-list">
+                <li class="tab-link active" data-tab="pf-1">Post</li>
+                <li class="tab-link" data-tab="pf-2">Friend</li>
+                <li class="tab-link" data-tab="pf-3">Thanks note</li>
+            </ul>
+
+            <div class="profile_inner">
+                <div id="pf-1" class="tab-content active">
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+                        <div class="image-item">
+                            <img src="../../assets/images/post_list01.png">
+                        </div>
+
+                    </div>
+                </div>
+                <div id="pf-2" class="tab-content">
+                    <div class="person_list">
+                        <div class="person_item">
+                            <div class="person_user">
+                                <img src="../assets/images/profile.png">
+                                <h5 class="user_name">Hana</h5>
+                            </div>
+                            <ul class="user_info">
+                                <li class="location">
+                                    일본
+                                </li>
+                                <li class="info">
+                                    여행중
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="person_item">
+                            <div class="person_user">
+                                <img src="../assets/images/profile.png">
+                                <h5 class="user_name">Hana</h5>
+                            </div>
+                            <ul class="user_info">
+                                <li class="location">
+                                    일본
+                                </li>
+                                <li class="info">
+                                    여행중
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="person_item">
+                            <div class="person_user">
+                                <img src="../assets/images/profile.png">
+                                <h5 class="user_name">Hana</h5>
+                            </div>
+                            <ul class="user_info">
+                                <li class="location">
+                                    일본
+                                </li>
+                                <li class="info">
+                                    여행중
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="person_item">
+                            <div class="person_user">
+                                <img src="../assets/images/profile.png">
+                                <h5 class="user_name">Hana</h5>
+                            </div>
+                            <ul class="user_info">
+                                <li class="location">
+                                    일본
+                                </li>
+                                <li class="info">
+                                    여행중
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="person_item">
+                            <div class="person_user">
+                                <img src="../assets/images/profile.png">
+                                <h5 class="user_name">Hana</h5>
+                            </div>
+                            <ul class="user_info">
+                                <li class="location">
+                                    일본
+                                </li>
+                                <li class="info">
+                                    여행중
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="pf-3" class="tab-content">
+                    <ul class="message">
+                        <li class="message_list">
+                            <div class="message_list-header">
+                                <h3>TOM</h3>
+
+                                <p class="date">2024-12-01</p>
+                            </div>
+                            <P class="message">
+                                Save message
+                            </P>
+                            
+                        </li>
+                        <li class="message_list">
+                            <div class="message_list-header">
+                                <h3>TOM</h3>
+
+                                <p class="date">2024-12-01</p>
+                            </div>
+                            <P class="message">
+                                Save message
+                            </P>
+                            
+                        </li>
+                        <li class="message_list">
+                            <div class="message_list-header">
+                                <h3>TOM</h3>
+
+                                <p class="date">2024-12-01</p>
+                            </div>
+                            <P class="message">
+                                Save message
+                            </P>
+                            
+                        </li>
+                        <li class="message_list">
+                            <div class="message_list-header">
+                                <h3>TOM</h3>
+
+                                <p class="date">2024-12-01</p>
+                            </div>
+                            <P class="message">
+                                Save message
+                            </P>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Common Bottom Navigation -->
+        <nav class="bottom-nav">
+            <div class="bottom-nav__inner flex-center-between">
+                <a href="./index.html" class="bottom-nav__item flex-col-center active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path d="M7.625 16.5L14.625 14.5L16.625 7.5L9.625 9.5L7.625 16.5ZM12.125 13.5C11.7083 13.5 11.3542 13.3542 11.0625 13.0625C10.7708 12.7708 10.625 12.4167 10.625 12C10.625 11.5833 10.7708 11.2292 11.0625 10.9375C11.3542 10.6458 11.7083 10.5 12.125 10.5C12.5417 10.5 12.8958 10.6458 13.1875 10.9375C13.4792 11.2292 13.625 11.5833 13.625 12C13.625 12.4167 13.4792 12.7708 13.1875 13.0625C12.8958 13.3542 12.5417 13.5 12.125 13.5ZM12.125 22C10.7417 22 9.44167 21.7375 8.225 21.2125C7.00833 20.6875 5.95 19.975 5.05 19.075C4.15 18.175 3.4375 17.1167 2.9125 15.9C2.3875 14.6833 2.125 13.3833 2.125 12C2.125 10.6167 2.3875 9.31667 2.9125 8.1C3.4375 6.88333 4.15 5.825 5.05 4.925C5.95 4.025 7.00833 3.3125 8.225 2.7875C9.44167 2.2625 10.7417 2 12.125 2C13.5083 2 14.8083 2.2625 16.025 2.7875C17.2417 3.3125 18.3 4.025 19.2 4.925C20.1 5.825 20.8125 6.88333 21.3375 8.1C21.8625 9.31667 22.125 10.6167 22.125 12C22.125 13.3833 21.8625 14.6833 21.3375 15.9C20.8125 17.1167 20.1 18.175 19.2 19.075C18.3 19.975 17.2417 20.6875 16.025 21.2125C14.8083 21.7375 13.5083 22 12.125 22ZM12.125 20C14.3417 20 16.2292 19.2208 17.7875 17.6625C19.3458 16.1042 20.125 14.2167 20.125 12C20.125 9.78333 19.3458 7.89583 17.7875 6.3375C16.2292 4.77917 14.3417 4 12.125 4C9.90833 4 8.02083 4.77917 6.4625 6.3375C4.90417 7.89583 4.125 9.78333 4.125 12C4.125 14.2167 4.90417 16.1042 6.4625 17.6625C8.02083 19.2208 9.90833 20 12.125 20Z" fill="#5F6368"/>
+                    </svg>
+                    <span>Explore</span>
+                </a>
+                <a href="./post.html" class="bottom-nav__item flex-col-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path d="M14.375 22V18.925L19.9 13.425C20.05 13.275 20.2167 13.1667 20.4 13.1C20.5833 13.0333 20.7667 13 20.95 13C21.15 13 21.3417 13.0375 21.525 13.1125C21.7083 13.1875 21.875 13.3 22.025 13.45L22.95 14.375C23.0833 14.525 23.1875 14.6917 23.2625 14.875C23.3375 15.0583 23.375 15.2417 23.375 15.425C23.375 15.6083 23.3417 15.7958 23.275 15.9875C23.2083 16.1792 23.1 16.35 22.95 16.5L17.45 22H14.375ZM15.875 20.5H16.825L19.85 17.45L19.4 16.975L18.925 16.525L15.875 19.55V20.5ZM6.375 22C5.825 22 5.35417 21.8042 4.9625 21.4125C4.57083 21.0208 4.375 20.55 4.375 20V4C4.375 3.45 4.57083 2.97917 4.9625 2.5875C5.35417 2.19583 5.825 2 6.375 2H14.375L20.375 8V11H18.375V9H13.375V4H6.375V20H12.375V22H6.375ZM19.4 16.975L18.925 16.525L19.85 17.45L19.4 16.975Z" fill="#5F6368"/>
+                    </svg>
+                    <span>Post</span>
+                </a>
+                <a href="./chatroom.html" class="bottom-nav__item flex-col-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path d="M5.62483 11C5.62483 6.58172 9.20625 3 13.6242 3C18.0421 3 21.6235 6.58172 21.6235 11C21.6235 12.15 21.3808 13.2434 20.944 14.2316L21.625 18.9992L17.5396 17.9778C16.3822 18.6287 15.0465 19 13.6242 19M3.62595 16C3.62595 16.7188 3.77758 17.4021 4.0506 18.0198L3.625 20.9995L6.17815 20.3611C6.90143 20.768 7.73615 21 8.62505 21C11.386 21 13.6242 18.7614 13.6242 16C13.6242 13.2386 11.386 11 8.62505 11C5.86412 11 3.62595 13.2386 3.62595 16Z" stroke="#484C52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Chatroom</span>
+                </a>
+                <a href="./profiles" class="bottom-nav__item flex-col-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path d="M6.725 17.1C7.575 16.45 8.525 15.9375 9.575 15.5625C10.625 15.1875 11.725 15 12.875 15C14.025 15 15.125 15.1875 16.175 15.5625C17.225 15.9375 18.175 16.45 19.025 17.1C19.6083 16.4167 20.0625 15.6417 20.3875 14.775C20.7125 13.9083 20.875 12.9833 20.875 12C20.875 9.78333 20.0958 7.89583 18.5375 6.3375C16.9792 4.77917 15.0917 4 12.875 4C10.6583 4 8.77083 4.77917 7.2125 6.3375C5.65417 7.89583 4.875 9.78333 4.875 12C4.875 12.9833 5.0375 13.9083 5.3625 14.775C5.6875 15.6417 6.14167 16.4167 6.725 17.1ZM12.875 13C11.8917 13 11.0625 12.6625 10.3875 11.9875C9.7125 11.3125 9.375 10.4833 9.375 9.5C9.375 8.51667 9.7125 7.6875 10.3875 7.0125C11.0625 6.3375 11.8917 6 12.875 6C13.8583 6 14.6875 6.3375 15.3625 7.0125C16.0375 7.6875 16.375 8.51667 16.375 9.5C16.375 10.4833 16.0375 11.3125 15.3625 11.9875C14.6875 12.6625 13.8583 13 12.875 13ZM12.875 22C11.4917 22 10.1917 21.7375 8.975 21.2125C7.75833 20.6875 6.7 19.975 5.8 19.075C4.9 18.175 4.1875 17.1167 3.6625 15.9C3.1375 14.6833 2.875 13.3833 2.875 12C2.875 10.6167 3.1375 9.31667 3.6625 8.1C4.1875 6.88333 4.9 5.825 5.8 4.925C6.7 4.025 7.75833 3.3125 8.975 2.7875C10.1917 2.2625 11.4917 2 12.875 2C14.2583 2 15.5583 2.2625 16.775 2.7875C17.9917 3.3125 19.05 4.025 19.95 4.925C20.85 5.825 21.5625 6.88333 22.0875 8.1C22.6125 9.31667 22.875 10.6167 22.875 12C22.875 13.3833 22.6125 14.6833 22.0875 15.9C21.5625 17.1167 20.85 18.175 19.95 19.075C19.05 19.975 17.9917 20.6875 16.775 21.2125C15.5583 21.7375 14.2583 22 12.875 22ZM12.875 20C13.7583 20 14.5917 19.8708 15.375 19.6125C16.1583 19.3542 16.875 18.9833 17.525 18.5C16.875 18.0167 16.1583 17.6458 15.375 17.3875C14.5917 17.1292 13.7583 17 12.875 17C11.9917 17 11.1583 17.1292 10.375 17.3875C9.59167 17.6458 8.875 18.0167 8.225 18.5C8.875 18.9833 9.59167 19.3542 10.375 19.6125C11.1583 19.8708 11.9917 20 12.875 20ZM12.875 11C13.3083 11 13.6667 10.8583 13.95 10.575C14.2333 10.2917 14.375 9.93333 14.375 9.5C14.375 9.06667 14.2333 8.70833 13.95 8.425C13.6667 8.14167 13.3083 8 12.875 8C12.4417 8 12.0833 8.14167 11.8 8.425C11.5167 8.70833 11.375 9.06667 11.375 9.5C11.375 9.93333 11.5167 10.2917 11.8 10.575C12.0833 10.8583 12.4417 11 12.875 11Z" fill="#484C52"/>
+                    </svg>
+                    <span>Profiles</span>
+                </a>
+            </div>
+        </nav>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="../../assets/js/main.js"></script>
+    </div>
+
+
+</body>
+
+</html>
