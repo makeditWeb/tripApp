@@ -305,14 +305,35 @@ $font-sizes: (
 }
 
 
-.app {
-  max-width: 430px;
-  margin: 0 auto;
-  width: 100%;
+
+
+@media screen and (min-width:769px){
+  .app {
+    max-width: 430px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+
+  html,body{
+    height: 100vh;
+    background: #fdfdfd;
+  }
+
+  .bottom-nav{
+    position: absolute;
+  }
 }
 
-// mobile 
-
+@media screen and (max-width:768px){
+  .app {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  
+}
 
 // app sign
 .signIn_wrap {
@@ -1088,8 +1109,8 @@ $font-sizes: (
   position: fixed;
   bottom: 60px;
   /* 하단 메뉴바 높이만큼 띄움 */
-  left: 0;
-  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
   height: 45%;
   background: white;
   border-radius: 20px 20px 0 0;
@@ -1580,6 +1601,9 @@ $font-sizes: (
   box-sizing: border-box;
   margin: 60px 0;
   position: relative;
+  height: calc(100% - 137px);
+  background: #fff;
+  overflow-y: auto;
 
   .search-bar {
     width: 100%;
@@ -2434,7 +2458,7 @@ $font-sizes: (
 }
 
 .post-container {
-
+  height: calc(100% - 150px);
   .map {
     width: 100%;
     height: 30vh;
@@ -3943,6 +3967,7 @@ $font-sizes: (
 
 .profile_wrapper {
   padding: 24px 16px;
+  background-color: #fff;
   .profile_container {
     background: white;
   }
@@ -4086,8 +4111,10 @@ $font-sizes: (
   .profile_inner{
     height: calc(100% - 35px);
     overflow-y: auto;
+    background-color: #fff;
   }
   .image-grid {
+    background-color: #fff;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
@@ -4110,7 +4137,6 @@ $font-sizes: (
     background-color: #fff;
     display: grid;
     align-items: center;
-    margin-bottom: 12px;
     padding: 0 16px;
     justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);
